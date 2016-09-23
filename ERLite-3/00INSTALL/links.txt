@@ -1,0 +1,70 @@
+links.txt
+Created Fri Apr  3 07:44:18 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Installation of Ubiquiti ERLite-3 related links
+
+
+Links
+=====
+Basic SOHO search
+https://community.ubnt.com/t5/forums/searchpage/tab/message?filter=labels&q=basic+soho
+
+Basic SOHO/Home Config
+https://community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398055#U398055
+
+Basic SOHO config with PPPoE client   (for 3 port ER-Lite)
+https://community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398059/highlight/true#M4995
+
+Basic SOHO config with PPTP remote-access server (for 3 port ER-Lite)
+https://community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398067/highlight/true#M5003
+
+Basic SOHO config for 5 port ER-POE  (for 5 port ER-POE)
+https://community.ubnt.com/ubnt/attachments/ubnt/EdgeMAX/13640/1/edge-poe-soho-conf.tar.gz
+
+Basic SOHO config for 5 port ER-PoE bridge eth0 & switch0  (for 5 port ER-PoE)
+https://community.ubnt.com/t5/EdgeMAX/EdgeRouter-PoE-Very-Simple-Config-Stumped/m-p/836084#M30672
+
+EdgeMAX - SOHO Example
+by UBNT-James on 03-11-2013 12:19 PM - edited on 01-08-2014 10:36 PM
+(31,901 Views)
+Interfaces, User, and NAT
+https://community.ubnt.com/t5/EdgeMAX-Configuration-Examples/EdgeMAX-SOHO-Example/ta-p/413019
+
+EdgeMAX PortForward
+Yeh hah! Good stuff.
+http://wiki.ubnt.com/EdgeMAX_PortForward
+
+Edgerouter lite function as pppoe client
+05-24-2013 06:49 AM
+Yes, but currently this needs to be configured using the CLI. The Wiki has a simple
+configuration example, and I think other people have posted examples on the forum too.
+https://community.ubnt.com/t5/EdgeMAX/Edgerouter-lite-function-as-pppoe-client/td-p/474073
+
+Edgerouter lite function as pppoe client
+05-24-2013 06:06 AM
+It does, I even have a pppoe client link in a vlan ("Internet by Orange" crap).
+https://community.ubnt.com/t5/EdgeMAX/Edgerouter-lite-function-as-pppoe-client/td-p/474073
+
+How To Configure Your Ubiquiti EdgeRouter Lite
+Published: Wednesday, 30 January 2013 06:00
+Written by Tim Higgins
+Has old vyatta.org/ links:
+  Vyatta Quick Start                             <=== Found
+  http://www.vyatta.com/products/protocols.php
+
+  Basic CLI references                           <=== FIXME: Need to find
+  http://www.vyatta.org/files/Glendale_BasicCLICommands_v02.pdf
+http://www.smallnetbuilder.com/lanwan/lanwan-howto/32014-how-to-configure-your-ubiquiti-edgerouter-lite
+
+PPPoE Client - CLI Command
+Has PPPoE configuration examples
+http://wiki.ubnt.com/PPPoE_Client_-_CLI_Commands
+
+Re: Basic SOHO/Home Config
+https://community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398059/highlight/true#M4995
+
+Ubiquiti Command Line Interface
+http://wiki.ubnt.com/Command_Line_Interface
+
