@@ -1,0 +1,62 @@
+links.txt
+Created Tue Mar 24 14:28:27 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Ubiquiti Networks related links
+
+
+Links
+=====
+Configuring advanced functionality in the Ubiquiti EdgeRouter Lite
+by Jason Hamilton on January 31, 2014 in Network
+https://www.404techsupport.com/2014/01/configuring-advanced-functionality-in-the-ubiquiti-edgerouter-lite/
+
+How to setup Ubiquiti EdgeRouter Lite
+Some good basic port setup details here.
+"CLI is a fork of Vyatta, so most Vyatta (or I guess now VyOs) guides
+are applicable."
+http://www.reddit.com/r/networking/comments/2eo16m/how_to_setup_ubiquiti_edgerouter_lite/
+
+Initial Configuration - Ubiquiti EdgeRouter Lite
+Posted on Jun 5th, 2013by Dave Lasley
+Picture looks exactly how I want to configure it.
+WRT54GL included!
+https://blog.dlasley.net/2013/06/initial-configuration-ubiquiti-edgerouter-lite/
+
+NAT Reflection - Ubiquiti EdgeRouter Lite & Dynamic IP
+Posted on Jun 5th, 2013 by Dave Lasley
+Port forwarding details.
+https://blog.dlasley.net/2013/06/nat-reflection-ubiquiti-edgerouter-lite-vyatta-and-dynamic-ip/
+
+NAT Reflection - Ubiquiti EdgeRouter Lite (V>=1.3.0) & Dynamic IP
+Posted on Nov 27th, 2013 by Dave Lasley
+"Note: If you are on ERL version 1.3.0 or greater, a command has been added
+that drastically simplifies this process. Read this tutorial for more details."
+https://blog.dlasley.net/2013/11/nat-reflection-ubiquiti-edgerouter-lite-v1-3-0-dynamic-ip/
+
+SOHO Edgemax Example
+This article is an example of how a small office might configure their
+EdgeRouter to connect the office with the Internet.
+Contents
+1 Physical Network Diagram
+2 Setup Interfaces
+3 Create New User
+4 Setup DHCP servers
+5 Configure DNS forwarding
+6 Configure NAT
+7 Stateful Firewall
+8 System Settings
+http://wiki.ubnt.com/SOHO_Edgemax_Example
+
+Ubiquiti Community Forum
+http://community.ubnt.com/t5/custom/page/page-id/Forums
+
+Ubiquiti Networks
+https://www.ubnt.com/
+
+Ubiquiti Routing and Switching
+https://www.ubnt.com/products/#all/routing
+
+Ubiquiti wiki
+http://wiki.ubnt.com/Main_Page
