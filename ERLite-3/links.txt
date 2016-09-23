@@ -73,6 +73,10 @@ modified on 23 September 2013 at 19:56 - 15,120 views
 Fine configuration details
 http://wiki.ubnt.com/SOHO_Edgemax_Example
 
+The Ubiquiti EdgeRouter Lite is a Swiss Army Knife for Home Lab networks
+Very nice article with some details.
+http://www.techazine.com/2015/07/27/the-ubiquiti-edgerouter-lite-is-a-swiss-army-knife-for-home-lab-networks/
+
 Ubiquiti Command Line Interface
 http://wiki.ubnt.com/Command_Line_Interface
 
