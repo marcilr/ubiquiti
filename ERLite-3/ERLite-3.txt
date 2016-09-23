@@ -1,0 +1,141 @@
+ERLite-3.txt
+Created Tue Mar 24 14:55:18 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+EdgeRouter Lite (ERL)
+3-Port Router
+
+At GCI Network Services, OSS Whit Reeve offered to sell me his new EdgeRouter
+Lite for $90.  Granted this is only $7 cheaper than Amazon.  He put me onto it
+and it seems reasonable.
+
+
+Wed Apr  1 16:16:40 AKDT 2015
+=============================
+Hit the atm at Carrs today on the way into GCI.  Took out $100 and burned $10
+on coffee (bikini babes) to get $90 for the EdgeRouter Lite.  Went to downtown
+DMV with Shena to get registration that expired yesterday, next hit Crossbar
+for lunch, picked up drycleaning, and finally dropped Shena off at home.  Got
+back to work around 2:30PM.  Long lunch.
+
+Got the EdgeRouter Lite from Whit.  Not in box, came with power brick, and
+console cable.  Plastic case.  Looks very nice as expected.
+
+
+Description
+===========
+The EdgeRouter Lite from Ubiquiti Networks is a dynamite little router for
+those who want to dive into more advanced networking concepts and setup
+super-reliable enterprise-quality networks.
+
+Super flexible, fast, and reliable, the EdgeRouter is a member of the EdgeMAX
+family and the worlds first extremely affordable one million packet-per-second
+router.
+
+Made for the tech savvy home and business user, the EdgeRouter Lite is housed
+in a compact, fanless form factor and operates quietly as it delivers the
+powerful routing, security, and management features you require to efficiently
+run your network.  This dual-core MIPS64 3 GigE port router is powered by the
+feature rich EdgeOS which has a next-generation graphical user interface.  This
+compact router will take up very little space yet is highly effective.
+
+To save even more space, the EdgeRouter can be wall-mounted.  The user
+interface is extremely attractive, clean, and highly configurable.
+
+amazon.com/
+
+
+Specifications
+==============
+make:               Ubiquiti Networks
+model:              ERLite-3
+cpu:                Cavium OCTEON Plus dual-core CN5020[1]
+                    (smallnetbuilder.com/) 
+                    dual-core MIPS64 with gigabit ethernet
+os:                 Vyatta
+description:        EdgeRouter Lite ERLite-3 512MB 3 Ethernet Ports Router
+                    amazon prime - March 25, 2015
+ports:              3
+performance:        1 million pps
+gigabit RJ45 ports: 3
+console port:       1
+SFP Ports:          N/A
+PoE:                N/A
+chassis:            plastic (!)
+dimensions:         7-3/4" (W) X 3-1/2" (D) X 1" (H)
+shipping weight:    1.4 pounds
+ASIN:               B00CPRVF5K
+
+ip address:         192.168.1.1 (default on port 0)
+price:              $97.79 (amazon prime - March 25, 2015)
+
+
+Features
+========
+o Static routes and support of routing protocols: OSPF RIP and BGP.
+  Comprehensive IPv6 support.
+o DHCP services firewall policies and NAT rules
+o Quality of Service (QoS)
+o Network administration and monitoring tools
+o Choice of configuration methods: the graphical user interface to visualize
+  the workings of your network or the Command Line Interface (CLI) to use
+  advanced command-driven configuration
+
+amazon.com/
+
+
+In box
+======
+o Edgeroute Lite
+o Power Adapter (12V, 1A)
+o Power Cord
+
+EdgeRouter Lite User Guide
+EdgeRouter_Lite_UG.pdf, p. 1
+
+Reviews
+=======
+5* Pretty awesome product so far
+ByShifty "trance addict"on March 18, 2015
+Verified Purchase
+Pretty awesome product so far.  If you're too lazy to figure out how to set
+this firewall up, there are plenty of sites out there that have basic configs
+you can download and apply (although, I would recommend having someone more
+experienced either review the configs, or simply configure it for you).
+
+5* Best Router on the Market!!
+ByDavid Dominguezon March 17, 2015
+Verified Purchase
+You can never go wrong with Ubiquiti products whatsoever!  My brother-in-law
+was the one that introduced me to this product & after looking into & finally
+buying it, I have not had 1 issue with my router.  It's really strong & stable
+the whole time.  I tested it several times & it still stays strong. So I
+highly recommend this product to those that are looking for a router.
+
+
+5* You'd be crazy to not get one.
+ByC. Miltenbergeron March 8, 2015
+Verified Purchase
+Simply put, this is the best $100 I've spent on networking equipment ever.
+This replaced an older PC running pfSense with PCI gig NICs. I immediately
+noticed a 20% increase in Internet download speeds.  If you get one download
+the latest firmware in advance, flash it, and then use the wizard to set up
+everything else.
+
+amazon.com/
+
+
+Links
+=====
+Cavium OCTEON Plus dual-core CN5020
+http://www.cavium.com/OCTEON-Plus_CN50XX.html
+
+First Look: Ubiquiti EdgeRouter Lite
+Published: Monday, 28 January 2013 17:02
+Written by Tim Higgins
+http://www.smallnetbuilder.com/lanwan/lanwan-reviews/32012-first-look-ubiquiti-edgerouter-lite
+
+EdgeRouter LITE
+Ubiquiti Networks
+https://www.ubnt.com/edgemax/edgerouter-lite/
