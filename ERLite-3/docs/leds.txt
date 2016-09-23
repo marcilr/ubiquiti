@@ -1,0 +1,22 @@
+leds.txt
+Created Fri Apr  3 14:15:58 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+LEDs on ERLite-3
+
+
+LED                State        Status
+---------------------------------------------------------------------------
+Console   Power    Off          EdgeRouter Lite not powered on.
+                   Green        EdgeRouter Lite is powered on.
+
+Ethernet (0-2)     Speed        Off        No Link
+                   Link/Act     Amber Link Established at 10/100 Mbps
+                                Amber Flashing Link Activity at 10/100 Mbps
+                                Green Link Established at 1000 Mbps
+                                Green Flashing Link Activity at 1000 Mbps
+
+
+EdgeRouter Lite User Guide
+EdgeRouter_Lite_UG.pdf, p. 1
