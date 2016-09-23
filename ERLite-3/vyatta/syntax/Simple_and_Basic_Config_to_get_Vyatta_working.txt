@@ -1,0 +1,233 @@
+Simple_and_Basic_Config_to_get_Vyatta_working.txt
+Created Mon Apr  6 15:31:39 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Simple and Basic Config to get Vyatta working
+Posted on 24/09/2012 by Phillip Cooper
+
+
+Recently i have been looking at loads of opensource routers, Such as M0n0wall,
+Smoothwall, PFsense, etc. Then i came acros Vyatta (http://www.vyatta.org)
+
+Vyatta comes in two flavours, subscription and Core.  The subscription version
+has loads more features like a GUI, however the Opensource version Core, just
+has a CLI with pretty much the same feature set.
+
+Vyatta has some excellent features that rival that of Cisco and many other
+router manufactures, purely due to its flexible deployment options, because
+its software you can deploy it in a XenServer environment to protect your host
+machines.
+
+In this post i will cover how to get Vyatta up and working assuming you have
+downloaded and installed the software to decent hardware.
+
+First of all we are going to configure the interfaces.
+
+log in to vyatta with username vyatta and password vyatta, then type in
+configure.
+
+set service ssh
+set interfaces ethernet eth0 address dhcp
+set interfaces ethernet eth0 description "Internet-Connection"
+set interfaces ethernet eth1 address 192.168.1.1/24
+set interfaces ethernet eth1 description "LAN-Connection"
+set service dhcp-server
+set service dhcp-server shared-network-name LAN-01
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+start 192.168.1.10
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+start 192.168.1.10 end 192.168.1.20
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+default-router 192.168.1.1
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+domain-name test.local
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+dns-server 192.168.1.1
+commit
+save
+
+The Above commands, when entered, will configure the system with WAN getting
+an IP address Via dhcp, and LAN giving out a dhcp range of
+192.168.1.10/24-192.168.1.20/24.  It will also set the client machine to use
+its self as the default router and DNS server.  It will also set the local
+domain name to test.local
+
+If you connect a computer to the LAN interface, you should be able to get and
+address but not access the internet.  The next section will enable some NAT
+rules to enable us to access the internet.
+
+set nat source rule 1
+set nat source rule 1 translation address masuerade
+set nat source rule 1 outbound-interface eth0
+set nat source rule 1 protocol all
+set nat source rule 1 source address 192.168.1.0/24
+set nat source rule 1 destination address 0.0.0.0/0
+commit
+save
+
+The Next section will set up the LAN Interface to listen for DNS requests and
+forward them to your DNS provider, in this case googles dns servers 8.8.8.8.
+
+set service dns forwarding listen-on eth1
+set service dns forwarding name-server 8.8.8.8
+commit
+save
+
+The next section we will set up the routers hostname, domain name, and time
+zone.
+
+set system host-name router
+set system domain-name test.local
+set system time-zone europe/London
+commit
+save
+
+To verify this connect a computer to the LAN port and see if you can access
+the internet.
+
+Also to verify configuration type in show, and it should present you with
+something like the below:-
+
+vyatta@Int-GW-01# show
+interfaces {
+ethernet eth0 {
+address dhcp
+description Internet-Connection
+duplex auto
+hw-id 08:00:27:d2:a5:e0
+smp_affinity auto
+speed auto
+}
+ethernet eth1 {
+address 192.168.23.1/24
+description LAN-Connection
+duplex auto
+hw-id 08:00:27:4e:51:3f
+smp_affinity auto
+speed auto
+}
+loopback lo {
+}
+}
+nat {
+source {
+rule 1 {
+destination {
+address 0.0.0.0/0
+}
+outbound-interface eth0
+protocol all
+source {
+address 192.168.23.0/24
+}
+translation {
+address masquerade
+}
+}
+}
+}
+service {
+dhcp-server {
+disabled false
+shared-network-name LAN {
+authoritative disable
+subnet 192.168.23.0/24 {
+default-router 192.168.23.1
+dns-server 192.168.23.1
+domain-name test.local
+lease 86400
+start 192.168.23.10 {
+stop 192.168.23.20
+}
+}
+}
+}
+dns {
+forwarding {
+cache-size 150
+listen-on eth1
+name-server 8.8.8.8
+}
+}
+ssh {
+port 22
+protocol-version v2
+}
+}
+system {
+config-management {
+commit-revisions 20
+}
+console {
+device ttyS0 {
+speed 9600
+}
+}
+domain-name test.local
+host-name Int-GW-01
+login {
+user vyatta {
+authentication {
+encrypted-password $1$iKbkuBMn$7DPJR3WOXTfRUrRorJ.780
+}
+level admin
+}
+}
+ntp {
+server 0.vyatta.pool.ntp.org {
+}
+server 1.vyatta.pool.ntp.org {
+}
+server 2.vyatta.pool.ntp.org {
+}
+}
+package {
+auto-sync 1
+repository community {
+components main
+distribution stable
+password ""
+url http://packages.vyatta.com/vyatta
+username ""
+}
+}
+syslog {
+global {
+facility all {
+level notice
+}
+facility protocols {
+level debug
+}
+}
+}
+time-zone Europe/London
+}
+
+phillipcooper.co.uk/2012/09/simple-and-basic-config-to-get-vyatta-working/
+
+
+Filelist
+========
+pdf/hardware/net/routers/ubiquiti/ERLite-3/vyatta/\
+Simple_and_Basic_Config_to_get_Vyatta_working.pdf
+  Printed web source to pdf
+  Simple and Basic Config to get Vyatta working
+  Posted on 24/09/2012 by Phillip Cooper
+  Phils Installs and How Toos
+  PAX Tech Bits & Video Tutorials
+  pages: 4
+  http://phillipcooper.co.uk/2012/09/simple-and-basic-config-to-get-vyatta-working/
+
+
+Links
+=====
+Simple_and_Basic_Config_to_get_Vyatta_working.pdf
+  Simple and Basic Config to get Vyatta working
+  Posted on 24/09/2012 by Phillip Cooper
+  Phils Installs and How Toos
+  PAX Tech Bits & Video Tutorials
+  pages: 4
+  http://phillipcooper.co.uk/2012/09/simple-and-basic-config-to-get-vyatta-working/
