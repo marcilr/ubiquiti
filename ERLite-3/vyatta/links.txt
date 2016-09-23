@@ -1,0 +1,36 @@
+links.txt
+Created Thu Apr  2 08:52:43 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Vyatta related links
+
+
+Links
+=====
+Brocade
+Your free 60-day trial starts here.
+Get instant access to the Brocade Vyatta 5400 vRouter. 
+Download your free virtual router trial now and enjoy 24/7 support.
+http://www.brocade.com/forms/jsp/vyatta-download/index.jsp?src=SEM&lsd=GGL&lst=Search&cn=SDN-GDG-14Q1-EVAL-SEM-Vyatta-Download&gcn=Branded%20-%20US%20-%20DG%20-%20Exact&gclid=CjwKEAjw3YipBRDL2bHhjLmFkQsSJADtzktjcineKs5A4wDa8fDdQIGweZE04UU_t_lXOxpixw21nhoC9Ibw_wcB
+
+Vyatta
+From Wikipedia, the free encyclopedia
+http://en.wikipedia.org/wiki/Vyatta
+
+Vyatta Introduction 
+Last update: 14-03-2008
+The interesting idea with Vyatta comes from their packaged software including XORP
+and a Debian-derived Linux distribution.  You can use Vyatta as a LiveCD and save the
+config on a floppy disk or install it on your hard drive for better performances.
+Vyatta is extremely easy to get started because the "routing engine" and the OS are
+now merged in a unique package.
+http://openmaniak.com/vyatta.php
+
+Vyatta Tutorial
+Last update: 26-12-2007
+To get started with Vyatta for the first time, we recommend to use the Vyatta
+"Quick Start Guide".  In this page we will give you some keys to help you to get
+friend with the Vyatta router. 
+http://openmaniak.com/vyatta_tutorial.php
+
