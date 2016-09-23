@@ -1,0 +1,45 @@
+chassis.txt
+Created Thu Apr  2 08:18:03 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Chassis
+
+When I got the Edgerouter lite from Whit Reeve at GCI Network Services, OSS
+I was a bit disappointed that it had a plastic chassis.  Apparently they 
+switched up to a metal chassis at least a year ago.
+
+Perhaps I shoud purchase the EdgeRouter Pro-8 for $350.95 and be done with it.
+NOTE: The EdgeRouter Pro-8 has fans.
+
+The ER-8 Edgerouter 8 Port Router lacks the 2 SFP ports
+
+
+"[-][deleted] 1 point 1 year ago 
+I know this is a bit late, and you're a developer so perhaps you're not
+involved in this area: Do you know why some edgerouter lites have metal bodies
+and some have black plastic?  It seems a lot of affiliates and re-sellers
+don't even know which version they have in stock and is a bit maddening to
+someone like me who specifically wants the metal body. :)
+permalink parent
+
+  [-]stigt 1 point 1 year ago 
+  The initial EdgeRouter Lite model had a plastic case.  When we developed the
+  EdgeRouter PoE-5 we went with a metal case and decided to also switch the
+  ER-Lite to the metal case to re-use the tooling.  The recently announced
+  EdgeRouter Pro-8 will also have a metal case.[1]
+  permalink parent
+
+
+
+Links
+=====
+[1] The initial EdgeRouter Lite model had a plastic case.  When we developed
+the EdgeRouter PoE-5 we went with a metal case and decided to also switch the
+ER-Lite to the metal case to re-use the tooling.  The recently announced
+EdgeRouter Pro-8 will also have a metal case.[1]
+http://www.reddit.com/r/networking/comments/1dhmzp/iama_proud_owner_of_an_edgerouter_ama/cd3wu7g
+
+IAMA proud owner of an EdgeRouter. AMA (self.networking)
+submitted 1 year ago by jobud9Studying Cisco Cert
+http://www.reddit.com/r/networking/comments/1dhmzp/iama_proud_owner_of_an_edgerouter_ama/
