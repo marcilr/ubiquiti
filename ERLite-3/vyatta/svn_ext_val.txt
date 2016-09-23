@@ -1,0 +1,13 @@
+#
+# svn_ext_val.txt
+# Created Mon Apr  6 14:55:27 AKDT 2015
+# by Raymond E. Marcil <marcilr@gmail.com>
+#
+
+
+#
+# List of repo hierarchical directories to checkout under vyatta/
+#
+# syntax/   Syntax
+#
+../../vyatta/syntax/syntax   ./syntax
