@@ -3,29 +3,94 @@ Created Fri Sep 23 15:09:43 AKDT 2016
 Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 
++++ Fri Sep 23 15:09:43 AKDT 2016 - Configure ethernet ports:
+port 0 - Internal 10.1.0.1 gateway
+port 1 - dhcp from GCI for NAT
+port 2 - static IP for ACS
+
++++ Fri Sep 23 15:09:43 AKDT 2016 - Configure WAN for specific hosts and/or
+services.
+
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure NAT for local network.
 NAT - EdgeRouter_Lite_UG.pdf, p. 24
 
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure for DNS forwarding to local
 network.
 
+Chapter 7: Services Tab
+
+DNS servers:
+  ACS:
+    209.193.4.7    - primary
+    209.112.160.2  - secondary
+
+  GCI:
+    209.165.131.12 - VCNS-1.gci.net
+    209.165.131.13 - VCNS-2.gci.net
+
+
+Chapter 7: Services Tab
 DNS - EdgeRouter_Lite_UG.pdf, p. 31
+
+
+DNS
+
+The EdgeRouter receives all LAN DNS requests and forwards them to the service
+provider's DNS server.  The EdgeRouter receives responses from the DNS server
+and forwards them to the LAN clients.
+
+DNS Forwarding
+
+Cache Size  Completed DNS requests are cached so
+  response time is faster for cached entries, and there is less
+  traffic traveling to the DNS server. Enter the maximum
+  number of DNS queries to cache.
+
+Interface  Select the appropriate interface that the
+  EdgeRouter will listen to so it can forward DNS requests.
+
+Add Listen Interface  You can select multiple interfaces.
+  To add another interface for DNS forwarding, click Add
+
+Listen Interface. From the new Interface drop‐down
+  menu, select the appropriate interface.
+
+Click Save to apply your changes, or click Cancel.
+
 
 "Under Services section in the web configuration tool, you will find both DHCP
 and DNS forwarding.  The DNS forwarding allows the router to serve as a local
 DNS server and then forward out those requests to specified servers."
 --techazine.com/
 
+
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure for DHCP to local network.
 Ports???
 
+Chapter 7: Services Tab
+
 DHCP- EdgeRouter_Lite_UG.pdf, p. 28
+
+The Services tab displays status information about DHCP servers, DNS
+forwarding, and the PPPoE server. Any setting marked with a blue asterisk * is
+required.
+
+You have three sub-tabs:
+DHCP Server  Configure DHCP servers to implement different subnets on the
+  independent interfaces.
+
+DHCP- EdgeRouter_Lite_UG.pdf, p. 28-31
 
 
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure OpenVPN for access from work.
 
+Chapter 6: Security Tab
 VPN - EdgeRouter_Lite_UG.pdf, p. 27
 
+VPN
+A common type of VPN uses PPTP (Point-to-Point Tunneling Protocol).
+The EdgeRouter can function as a PPTP VPN server so a remote VPN client can
+access the LAN using a PPTP VPN tunnel over the Internet.
 
 
 Links
