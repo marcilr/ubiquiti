@@ -1,0 +1,18 @@
+ubiquiti.txt
+Created Tue Mar 24 14:27:17 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Ubiquiti Networks is an American technology company started in 2005.
+Based in San Jose, California Ubiquiti manufactures wireless data
+communication products for enterprise and wireless broadband.
+--wikipedia.org/
+
+
+Links
+=====
+Ubiquiti Networks
+https://www.ubnt.com/
+
+Ubiquiti Networks
+https://en.wikipedia.org/wiki/Ubiquiti_Networks
