@@ -1,0 +1,15 @@
+reset.txt
+Created Fri Apr  3 14:11:08 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Reset
+
+
+To reset to factory defaults, disconnect the Power Adapter from the Power
+port.  Press and hold the Reset button while connecting the Power Adapter
+to the Power port. Keep holding the button until the right LED on port 2
+starts flashing and then stops after a few seconds.
+
+Edgerouter Lite User Guide
+EdgeRouter_Lite_UG.pdf, p. 1
