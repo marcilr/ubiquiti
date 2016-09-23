@@ -1,0 +1,89 @@
+links.txt
+Created Tue Mar 24 15:02:49 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+EdgeRouter Lite related links
+
+
+Google: edgerouter lite os
+
+
+Links
+=====
+EdgeMax Forum
+http://forum.ubnt.com/forumdisplay.php?f=84
+
+EdgeRouter LITE
+https://www.ubnt.com/edgemax/edgerouter-lite/
+
+EdgeRouter Lite ERLite-3 512MB 3 Ethernet Ports Router
+by Ubiquiti
+price: $97.79 (amazon prime - March 24, 2015)
+http://www.amazon.com/EdgeRouter-ERLite-3-512MB-Ethernet-Router/dp/B00CPRVF5K/ref=sr_1_1?ie=UTF8&qid=1427227246&sr=8-1&keywords=edge+router
+
+First Look: Ubiquiti EdgeRouter Lite
+Published: Monday, 28 January 2013 17:02
+Written by Tim Higgins
+Fine page where I found the ubiquiti_erl_panel_callouts.jpg
+Ubiquiti ERL front and rear panels picture.
+http://www.smallnetbuilder.com/lanwan/lanwan-reviews/32012-first-look-ubiquiti-edgerouter-lite
+
+How To Configure Your Ubiquiti EdgeRouter Lite
+Published: Wednesday, 30 January 2013 06:00
+Written by Tim Higgins
+http://www.smallnetbuilder.com/lanwan/lanwan-howto/32014-how-to-configure-your-ubiquiti-edgerouter-lite
+
+IAMA proud owner of an EdgeRouter. AMA (self.networking)
+submitted 1 year ago by jobud9Studying Cisco Cert
+"The initial EdgeRouter Lite model had a plastic case.  When we developed the
+EdgeRouter PoE-5 we went with a metal case and decided to also switch the
+ER-Lite to the metal case to re-use the tooling.  The recently announced
+EdgeRouter Pro-8 will also have a metal case."
+http://www.reddit.com/r/networking/comments/1dhmzp/iama_proud_owner_of_an_edgerouter_ama/
+
+mrjester's Basic SOHO/HOME Config
+http://community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398057/highlight/true#M4993
+
+PPTP Remote Access - CLI Commands
+http://wiki.ubnt.com/PPTP_Remote_Access_-_CLI_Commands
+
+Re: Edge Router; Vpn throughput?
+09-12-2012 02:51 PM
+Page with great stig picture.
+PPTP?
+If you care about security, please don't.
+PPTP was demonstrated as broken by design by Moxie Marlinspike about a month ago. 
+PPTP = VERY BAD.
+http://sadc-nms-presenter4.operations.gci.com/default.aspx
+
+Setting up the Ubiquiti EdgeRouter Lite and first impressions
+by Jason Hamilton on January 8, 2014 in Hardware and Gadgets, Network, Reviews
+Has firmware update section:
+The first thing I did when I was connected to the EdgeOS was to download the
+latest firmware from Ubiquiti for the EdgeRouter Lite.  When you click the
+"System" tab near the bottom, a screen comes up and allows you to upload the
+new firmware.  After it finishes uploading, verifying, and rebooting, the
+system will come back up with the latest version (version 1.3.0 at the time of
+writing).
+https://www.404techsupport.com/2014/01/setting-up-the-ubiquiti-edgerouter-lite-and-first-impressions/
+
+SOHO Edgemax Example
+modified on 23 September 2013 at 19:56 - 15,120 views
+Fine configuration details
+http://wiki.ubnt.com/SOHO_Edgemax_Example
+
+Ubiquiti Command Line Interface
+http://wiki.ubnt.com/Command_Line_Interface
+
+Ubiquiti EdgeMax ERL review
+Published: Monday, 21 April 2014 12:00
+Written by Doug Reid
+http://onebadpixel.com/blog/2014/02/11/ubiquiti-edgemax-erl-review/
+
+You're not the 1st to kid me about that
+"He keeps saying he is not but when you go to Ubiquiti's office in SJ he is
+always walking around in this outfit and NEVER lifts his visor.  It is a
+little dis-concerning!"
+http://www.reddit.com/r/networking/comments/1dhmzp/iama_proud_owner_of_an_edgerouter_ama/
+http://community.ubnt.com/t5/EdgeMAX/Edge-Router-Vpn-throughput/m-p/325067/highlight/true#M796
