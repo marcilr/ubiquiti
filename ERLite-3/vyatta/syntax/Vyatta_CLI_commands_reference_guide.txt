@@ -1,0 +1,376 @@
+Vyatta_CLI_commands_reference_guide.txt
+Created Mon Apr  6 15:00:19 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Vyatta CLI commands reference guide...
+Posted on 28/09/2012[1] by Phillip Cooper[2]
+
+Below I list a CLI Command reference for the Vyatta Router.
+
+
+Sections
+--------
+o Configure Interfaces
+o Configure DHCP
+o Adding Static Mappings for IP to MAC/PC
+o Configure system DNS
+o Configure LAN DNS Forwarding
+o Configure Wifi
+o Add eth1 to the bridge
+o Configure the Wifi Settings
+o Configure default routes
+o Configure NAT
+o Configuring a sample NAT Rule
+o Configure SSH
+o Configure IPSEC Site-to-Site
+o Configure system user environments
+o Rip Configuration
+o OSPF Configuration
+o BGP Configuration
+o Configure GRE <No Encryption>
+o Firewall Configuration
+o VRRP Virtual Router Redundancy Protocol Configuration
+o OpenVPN on Vyatta
+o Factory Reset Vyatta
+
+
+# Configure Interfaces
+======================
+configure
+set interfaces ethernet eth0 address dhcp
+set interfaces ethernet eth0 description "Internet-Connection"
+set interfaces ethernet eth1 address 192.168.1.1/24
+set interfaces ethernet eth1 description "LAN-Connection"
+commit
+save
+
+
+# Configure DHCP
+================
+configure
+set service dhcp-server
+set service dhcp-server shared-network-name LAN-01
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+start 192.168.1.10
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+start 192.168.1.10 stop 192.168.1.20
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+default-router 192.168.1.1
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+domain-name test.local
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+dns-server 192.168.1.1
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+dns-server 8.8.8.8
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+dns-server 8.8.4.4
+commit
+save
+
+
+Adding Static Mappings for IP to MAC/PC
+=======================================
+set service dhcp-server shared-network-name LAN-01 subnet 192.168.1.0/24 \
+static-mapping <PCNAME/HOSTNAME> ip-address 192.168.1.10
+
+
+# Configure system DNS
+======================
+configure
+set system name-server 8.8.8.8
+set system name-server 8.8.4.4
+set system name-server 208.67.222.222
+set system name-server 208.67.220.220
+commit
+save
+
+
+# Configure LAN DNS Forwarding
+==============================
+configure
+set service dns forwarding listen-on eth1
+set service dns forwarding name-server 8.8.8.8
+set service dns forwarding name-server 8.8.4.4
+set service dns forwarding name-server 208.67.222.222
+set service dns forwarding name-server 208.67.220.220
+commit
+save
+
+
+# Configure Wifi
+================
+First Create Bridge between eth1 and wlan0 called br0
+
+set interfaces bridge br0 address 192.168.88.1 / 24 
+set interfaces bridge br0 LAN Description
+
+
+Add eth1 to the bridge
+======================
+set eth1 Ethernet interfaces bridge br0 bridge-Group
+set eth1 interfaces Ethernet LAN Description
+
+
+Configure the Wifi Settings
+===========================
+set interfaces wireless wlan0 bridge-group bridge br0
+set interfaces wireless wlan0 channel 2
+set interfaces wireless wlan0 description LAN
+set interfaces wireless wlan0 mode g
+set interfaces wireless wlan0 security wpa mode wpa2
+set interfaces wireless wlan0 security wpa passphrase 12345678
+set interfaces wireless wlan0 ssid vyatta
+set interfaces wireless wlan0 type access-point
+
+
+Configure default routes
+========================
+configure
+set protocol static route 0.0.0.0/0 next-hop 192.168.1.1 \
+<IP Of Next Hop Router> 
+commit
+save
+
+You could also use this option to route different IP Addresses to different
+routers etc...
+
+
+Configure NAT
+=============
+configure
+set nat source rule 1
+set nat source rule 1 translation address masquerade
+set nat source rule 1 outbound-interface eth0
+set nat source rule 1 protocol all
+set nat source rule 1 source address 192.168.1.0/24
+set nat source rule 1 destination address 0.0.0.0/0
+commit
+save
+
+
+# Configuring a sample NAT Rule
+===============================
+configure
+set nat destination rule 10
+set nat destination rule 10 inbound-interface eth0 
+set nat destination rule 10 destination port 1723 
+set nat destination rule 10 translation address 192.168.1.3 
+set nat destination rule 10 translation port 1723 
+set nat destination rule 10 protocol tcp
+commit
+save
+
+Some Simple commands to check NAT
+
+show nat rules
+show nat translations
+
+
+# Configure SSH
+===============
+configure
+set service ssh
+set service ssh listen-address 192.168.1.1
+set service ssh port 22 <Can be set to another port number>
+set service ssh protocol-version v2
+commit
+save
+
+
+# Configure IPSEC Site-to-Site
+==============================
+set vpn ipsec 
+set vpn ipsec ipsec-interfaces interface eth0 <Interface connected to Internet>
+set vpn ipsec ike-group IKE
+set vpn ipsec ike-group IKE proposal 1 encryption 3des 
+set vpn ipsec ike-group IKE proposal 1 hash md5 
+set vpn ipsec ike-group IKE proposal 1 dh-group 2
+set vpn ipsec esp-group ESP proposal 1 encryption 3des 
+set vpn ipsec esp-group ESP proposal 1 hash md5 
+set vpn ipsec site-to-site peer <IP OF REMOTE WAN END> ike-group IKE
+set vpn ipsec site-to-site peer <IP OF REMOTE WAN END> local-ip \
+<Local WAN Address>
+set vpn ipsec site-to-site peer <IP OF REMOTE WAN END> tunnel 1 \
+local subnet 192.168.1.0/24
+set vpn ipsec site-to-site peer <IP OF REMOTE WAN END> tunnel 1 \
+remote subnet 192.168.2.0/24
+set vpn ipsec site-to-site peer <IP OF REMOTE WAN END> tunnel 1 \
+esp-group ESP
+
+
+# Configure system user environments
+====================================
+configure
+set system host-name router
+set system domain-name test.local
+set system time-zone europe/London
+commit
+save
+
+
+# Rip Configuration
+===================
+configure
+set protocols rip interface ethX
+set interfaces ethernet ethX ip rip authentication md5 23
+set interfaces ethernet ethX ip rip authentication md5 23 password <<PASSWORD>>
+commit
+save
+run show ip route
+run show ip route rip
+
+
+# OSPF Configuration
+====================
+set protocols ospf parameters router-id 192.168.1.1 <IP OF Router>
+set protocols ospf area 0.0.0.0 network 192.168.1.0/24 \
+<Subnet of connected networks>
+set protocols ospf area 0.0.0.0 network 192.168.2.0/24 \
+<Subnet of connected networks>
+set protocols ospf area 0.0.0.0 authentication md5
+set protocols ospf redistribute connected
+set interfaces ethernet eth0 ip ospf authentication md5
+set interfaces ethernet eth0 ip ospf authentication md5 key-id 25
+set interfaces ethernet eth0 ip ospf authentication md5 key-id 25 \
+md5-key PASSWORD
+commit
+save
+
+
+# BGP Configuration
+===================
+configure
+set protocols bgp <AS Number>
+set protocols bgp <AS Number> neighbor <IP of Other router>
+set protocols bgp <AS Number> neighbor <IP of Other router> \
+remote-as <AS Number>
+set protocols bgp <AS Number> network <Local networks>
+set protocols bgp <AS Number> redistribute connected
+set protocols bgp <AS Number> neighbor <IP of Other router> password <password>
+set protocols bgp <AS Number> parameters router-id <IP of local router>
+commit
+save
+
+
+# Configure GRE <No Encryption>
+===============================
+configure
+set interfaces tunnel tun0 address 172.14.1.1/30 <Simple 2 IP Addresses used>
+set interfaces tunnel tun0 local-ip <Local WAN IP>
+set interfaces tunnel tun0 remote-ip <Remote WAN IP>
+set interfaces tunnel tun0 encapsulation gre
+set interfaces tunnel tun0 description "GRE Tunnel To Remote site"
+commit
+save
+
+Local Lan Address 192.168.1.0/24
+Remote Lan Address 192.168.2.0/24
+
+  set protocols static route 192.168.2.0/24 next-hop 172.14.1.2
+
+
+# Firewall Configuration
+========================
+configure
+set zone-policy zone private description "Private zone inside firewall"
+set zone-policy zone public description "Public zone outside firewall"
+set zone-policy zone public interface eth0
+set zone-policy zone private interface eth1
+set firewall name to-public description "Allow authorized traffic to Public Zone"
+set firewall name to-public rule 1 action accept
+set firewall name to-public rule 1 state established enable
+set firewall name to-public rule 1 state related enable
+set firewall name to-public rule 10 action accept
+set firewall name to-public rule 10 destination port 80,443
+set firewall name to-public rule 10 protocol tcp
+set firewall name to-private description "Allow established to Private zone"
+set firewall name to-private rule 1 action accept
+set firewall name to-private rule 1 state established enable
+set firewall name to-private rule 1 state related enable
+set zone-policy zone private from public firewall name to-private
+set zone-policy zone public from private firewall name to-public
+commit
+save
+
+
+# VRRP Virtual Router Redundancy Protocol Configuration
+=======================================================
+set interfaces ethernet eth2 vrrp vrrp-group 10 priority 150
+set interfaces ethernet eth2 vrrp vrrp-group 10 virtual-address 192.168.1.254
+set interfaces ethernet eth2 vrrp vrrp-group 10 description "LAN VRRP"
+set interfaces ethernet eth2 vrrp vrrp-group 10 advertise-interval 1
+set interfaces ethernet eth2 vrrp vrrp-group 10 authentication type ah
+set interfaces ethernet eth2 vrrp vrrp-group 10 authentication \
+password PASSWORD
+commit
+save
+
+
+OpenVPN on Vyatta
+=================
+OpenVPN Server Setup
+
+configure
+su
+cd /var/share/doc/openvpn/examples/easy-rsa
+cp -r 2.0/ /etc/openvpn/easy-rsa
+source ~/vars
+./clean-all
+./build-ca
+./build-key-server server
+./build-key <KEY>
+./build-dh
+For additional Routers
+
+cd /etc/openvpn/
+source ./vars
+./build-key <Site Name>
+Vyatta Config
+
+set interfaces openvpn vtun0
+set interfaces openvpn vtun0 mode server
+set interfaces openvpn vtun0 server subnet 192.168.1.0/24
+set interfaces openvpn vtun0 tls ca-cert-file /root/OpenVPN_CA.crt
+set interfaces openvpn vtun0 tls cert-file /root/openvpnsrv_cert.crt
+set interfaces openvpn vtun0 tls key-file /root/openvpnsrv_key.key
+set interfaces openvpn vtun0 tls dh-file /root/dh2048.pem
+set interfaces openvpn vtun0 encryption aes128
+set interfaces openvpn vtun0 server push-route 192.168.2.0/24
+commit
+save
+
+
+# Factory Reset Vyatta
+======================
+configure
+load /opt/vyatta/etc/config.boot.default 
+save
+
+phillipcooper.co.uk/2012/09/vyatta-cli-commands-reference-guide/
+
+
+Filelist
+========
+pdf/hardware/net/routers/ubiquiti/ERLite-3/vyatta/\
+Vyatta_CLI_commands_reference_guide.pdf (336KB)
+  Printout of source web page:
+  Vyatta CLI commands reference guide...
+  Posted on 28/09/2012 by Phillip Cooper
+  pages: 7
+  http://phillipcooper.co.uk/2012/09/vyatta-cli-commands-reference-guide/
+
+
+Links
+=====
+[1] 28/09/2012
+http://phillipcooper.co.uk/2012/09/vyatta-cli-commands-reference-guide/
+
+[2] Phillip Cooper
+http://phillipcooper.co.uk/author/admin/
+
+Vyatta CLI commands reference guide...
+Posted on 28/09/2012 by Phillip Cooper
+The best Vyatta cli guide I've scene yet.
+http://phillipcooper.co.uk/2012/09/vyatta-cli-commands-reference-guide/
