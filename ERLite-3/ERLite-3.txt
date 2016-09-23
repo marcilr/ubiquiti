@@ -5,6 +5,7 @@ Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 EdgeRouter Lite (ERL)
 3-Port Router
+Model: ERLIte-3
 
 At GCI Network Services, OSS Whit Reeve offered to sell me his new EdgeRouter
 Lite for $90.  Granted this is only $7 cheaper than Amazon.  He put me onto it
