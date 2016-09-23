@@ -1,0 +1,35 @@
+TODO
+Created Fri Sep 23 15:09:43 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
++++ Fri Sep 23 15:09:43 AKDT 2016 - Configure NAT for local network.
+NAT - EdgeRouter_Lite_UG.pdf, p. 24
+
++++ Fri Sep 23 15:09:43 AKDT 2016 - Configure for DNS forwarding to local
+network.
+
+DNS - EdgeRouter_Lite_UG.pdf, p. 31
+
+"Under Services section in the web configuration tool, you will find both DHCP
+and DNS forwarding.  The DNS forwarding allows the router to serve as a local
+DNS server and then forward out those requests to specified servers."
+--techazine.com/
+
++++ Fri Sep 23 15:09:43 AKDT 2016 - Configure for DHCP to local network.
+Ports???
+
+DHCP- EdgeRouter_Lite_UG.pdf, p. 28
+
+
++++ Fri Sep 23 15:09:43 AKDT 2016 - Configure OpenVPN for access from work.
+
+VPN - EdgeRouter_Lite_UG.pdf, p. 27
+
+
+
+Links
+=====
+The Ubiquiti EdgeRouter Lite is a Swiss Army Knife for Home Lab networks
+Some good configuration details here.
+http://www.techazine.com/2015/07/27/the-ubiquiti-edgerouter-lite-is-a-swiss-army-knife-for-home-lab-networks/
