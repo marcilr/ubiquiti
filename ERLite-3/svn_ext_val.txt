@@ -1,0 +1,22 @@
+#
+# svn_ext_val.txt
+# Created Tue Mar 24 14:00:25 AKDT 2015
+# by Raymond E. Marcil <marcilr@gmail.com>
+#
+
+
+#
+# List of repo hierarchical directories to checkout under ERLite-3/
+#
+# 00INSTALL/   Installation and configuration
+# docs/        Documentation
+# pics/        Pictures
+# vyatta/      Vyatta - Linux-based extensible network OS
+#              Purchased by Brocade in April 2013.
+#              A free download of Vyatta has been available since March 2006.
+#              http://en.wikipedia.org/wiki/Vyatta
+#
+../../ERLite-3/00INSTALL/00INSTALL   ./00INSTALL
+../../ERLite-3/docs/docs             ./docs
+../../ERLite-3/pics/pics             ./pics
+../../ERLite-3/vyatta/vyatta/        ./vyatta
