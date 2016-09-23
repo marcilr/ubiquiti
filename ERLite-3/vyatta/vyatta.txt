@@ -1,0 +1,19 @@
+vyatta.txt
+Created Thu Apr  2 08:50:58 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Vyatta provides software-based virtual router, virtual firewall and VPN
+products for Internet Protocol networks (IPv4 and IPv6).  A free download of
+Vyatta has been available since March 2006.  The system is a specialized
+Debian-based Linux distribution with networking applications such as Quagga,
+OpenVPN, and many others. 
+
+wikipedia.org/
+
+
+Links
+=====
+Vyatta
+From Wikipedia, the free encyclopedia
+http://en.wikipedia.org/wiki/Vyatta
