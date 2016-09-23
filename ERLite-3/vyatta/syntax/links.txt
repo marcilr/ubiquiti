@@ -1,0 +1,54 @@
+links.txt
+Created Mon Apr  6 15:40:32 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Syntax for Vyatta related links
+
+
+Links
+=====
+Command Line Interface
+http://wiki.ubnt.com/Command_Line_Interface
+
+Configure a Site-to-site VPN using the Vyatta Network Appliance
+by Sameer Satyam
+Last updated on September 29, 2015
+Article ID: 3265
+http://www.rackspace.com/knowledge_center/article/configure-a-site-to-site-vpn-using-the-vyatta-network-appliance
+
+Configuring Interface Based Firewall on the Vyatta Network Appliance
+Article ID: 3370 Last updated on January 8, 2014 Authored by: Sameer Satyam
+http://www.rackspace.com/knowledge_center/article/configuring-interface-based-firewall-on-the-vyatta-network-appliance
+
+Configure Remote Access VPN Service on a Vyatta Appliance
+Article ID: 3264
+Last updated on September 29, 2015
+by Sameer Satyam
+http://www.rackspace.com/knowledge_center/article/configure-remote-access-vpn-service-on-a-vyatta-appliance
+
+GRE between Vyatta Core & pfSense
+Posted on 11/08/2013 by Phillip Cooper
+http://phillipcooper.co.uk/2013/08/gre-between-vyatta-core-pfsense/
+
+Secure RDP connection through Vyatta using PuTTY
+Posted by rbgeek on June 24, 2013
+https://rbgeek.wordpress.com/2013/06/24/secure-rdp-connection-through-vyatta-using-putty/
+
+Simple and Basic Config to get Vyatta working
+Posted on 24/09/2012 by Phillip Cooper
+Phils Installs and How Toos
+PAX Tech Bits & Video Tutorials
+http://phillipcooper.co.uk/2012/09/simple-and-basic-config-to-get-vyatta-working/
+
+Vyatta CLI commands reference guide...
+Posted on 28/09/2012 by Phillip Cooper
+Phils Installs and How Toos
+PAX Tech Bits & Video Tutorials
+The best Vyatta cli guide I've scene yet.
+http://phillipcooper.co.uk/2012/09/vyatta-cli-commands-reference-guide/
+
+Vyatta VC5 - Simple Firewall and NAT Rules
+02.07.2009
+http://www.carbonwind.net/VyattaOFR/Firewall/Firewall.htm
+
