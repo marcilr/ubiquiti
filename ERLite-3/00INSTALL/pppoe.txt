@@ -1,0 +1,61 @@
+pppoe.txt
+Created Fri Apr  3 14:50:21 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+PPPoE configuration
+
+e: Basic SOHO/Home Config [ Edited ]
+Options
+02-08-2013 01:38 PM - edited 4-11-2013 03:40 PM
+
+I took the sample config post #3 and modified it for a pppoe connection.  Use
+the same steps as in post #3, but upload this config instead: Basic SOHO
+config using pppoe 
+Once you've rebooted it, you'll need to log in to the CLI to change the pppoe
+username and password:
+ubnt@ubnt:~$ configure 
+ubnt@ubnt# show interfaces ethernet eth2 pppoe 0
+ default-route auto
+ firewall {
+     in {
+         name pppoe-in
+     }
+     local {
+         name pppoe-local
+     }
+     out {
+         modify pppoe-out
+     }
+ }
+ mtu 1492
+ name-server auto
+ password secret
+ user-id joe
+
+ubnt@ubnt# set interfaces ethernet eth2 pppoe 0 user-id <your userid>
+ubnt@ubnt# set interfaces ethernet eth2 pppoe 0 password <your password>
+ubnt@ubnt# commit
+ubnt@ubnt# save; exit
+Saving configuration to '/config/config.boot'...
+Done
+exit
+ubnt@ubnt:~$
+
+community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398059/highlight/true#M4995
+
+
+
+Links
+=====
+Edgerouter lite function as pppoe client
+05-24-2013 06:06 AM
+It does, I even have a pppoe client link in a vlan ("Internet by Orange" crap).
+https://community.ubnt.com/t5/EdgeMAX/Edgerouter-lite-function-as-pppoe-client/td-p/474073
+
+PPPoE Client - CLI Command
+Has PPPoE configuration examples
+http://wiki.ubnt.com/PPPoE_Client_-_CLI_Commands
+
+Re: Basic SOHO/Home Config
+https://community.ubnt.com/t5/EdgeMAX/Basic-SOHO-Home-Config/m-p/398059/highlight/true#M4995
