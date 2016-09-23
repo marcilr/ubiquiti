@@ -3,16 +3,28 @@ Created Fri Sep 23 15:09:43 AKDT 2016
 Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 
+Details from:
+  User Guide, Model: ERLite-3
+  EdgeRouter_Lite_UG.pdf
+    
+
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure ethernet ports:
 port 0 - Internal 10.1.0.1 gateway
 port 1 - dhcp from GCI for NAT
 port 2 - static IP for ACS
 
+
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure WAN for specific hosts and/or
 services.
 
+Chapter 3: Using EdgeOS, p. 5
+Ports and Status information, p. 5
+
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure NAT for local network.
+
+Chapter 6: Security Tab
 NAT - EdgeRouter_Lite_UG.pdf, p. 24
+
 
 +++ Fri Sep 23 15:09:43 AKDT 2016 - Configure for DNS forwarding to local
 network.
