@@ -1,0 +1,25 @@
+README
+Created Thu Apr  2 08:15:57 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+chassis.txt
+  Chassis
+  When I got the Edgerouter lite from Whit Reeve at GCI Network Services, OSS
+  I was a bit disappointed that it had a plastic chassis.  Apparently they
+  switched up to a metal chassis at least a year ago.
+
+leds.txt
+  LEDs on ERLite-3
+
+reset.txt
+  To reset to factory defaults, disconnect the Power Adapter from the Power
+  port.  Press and hold the Reset button while connecting the Power Adapter
+  to the Power port. Keep holding the button until the right LED on port 2
+  starts flashing and then stops after a few seconds.
+
+  Edgerouter Lite User Guide
+  EdgeRouter_Lite_UG.pdf, p. 1
+
