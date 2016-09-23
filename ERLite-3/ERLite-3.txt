@@ -70,6 +70,7 @@ console port:       1
 SFP Ports:          N/A
 PoE:                N/A
 chassis:            plastic (!)
+power:              12V, 1A
 dimensions:         7-3/4" (W) X 3-1/2" (D) X 1" (H)
 shipping weight:    1.4 pounds
 ASIN:               B00CPRVF5K
