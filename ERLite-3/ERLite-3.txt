@@ -56,7 +56,7 @@ cpu:                Cavium OCTEON Plus dual-core CN5020[1]
 os:                 Vyatta
 description:        EdgeRouter Lite ERLite-3 512MB 3 Ethernet Ports Router
                     amazon prime - March 25, 2015
-ports:              3
+ports:              3 (Ethernet 0-2)
 performance:        1 million pps
 gigabit RJ45 ports: 3
 console port:       1
